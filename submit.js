@@ -25,8 +25,19 @@ function parse() {
                 // referrer: 'no-referrer', // no-referrer, *client
                 body: JSON.stringify(data)
             })
-            .then(response => response.json())
-            .then(response => console.log(response))
+            .then(response => {
+                if (response.status == 200){
+                    // go to students page
+                    window.location.href = "./students.html";
+                    throw new Error("Not OK");
+                }
+                else{
+                    // show the error
+                    return response.json();
+                }
+
+            })
+            .then(response => alert(response.message))
             .catch(err => console.log(err));
     } else {
         alert("Please add your skills first");
