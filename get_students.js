@@ -7,11 +7,40 @@ function get_all_students() {
 }
 
 function search() {
+    if (document.getElementById("search-form").elements[0].value !== "") {
+        if (document.getElementById("search-form").elements[1].checked) // name
+            get_students_by_name();
+        else // skills
+            get_students_by_skills();
+    } else {
+        get_all_students();
+    }
     event.preventDefault();
 }
 
-function get_students_by_name() {
+function toggler(element) {
+    if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
 
+function toggle_style() {
+    const skills_input = document.getElementById("skills-input");
+    const name_input = document.getElementById("name-input");
+    toggler(skills_input);
+    toggler(name_input);
+}
+
+function get_students_by_name() {
+    loading()
+    const name = document.getElementById("search-form").elements[0].value;
+    console.log(name)
+    fetch(`http://localhost:5000/users?name=${name}`)
+        .then(response => response.json())
+        .then(students => show_students(students))
+        .catch(err => show_nothing());
 }
 
 function get_students_by_skills() {
@@ -19,15 +48,16 @@ function get_students_by_skills() {
 }
 
 function show_students(students_list) {
-    console.log(students_list);
+    if (students_list.length === 0)
+        return show_nothing();
 
     list_in_html = "";
     for (let student of students_list) {
         skills = ""
         for (let skill of student.skills) {
-            skills += `<li class="topic-tag-action f6 float-left js-tag-input-tag text-primary" style="height: 30px">${skill} &nbsp;&nbsp</li>`
+            skills += `<li class="topic-tag-action f6 p-2 float-left js-tag-input-tag text-blue" style="height: 25px">${skill}</li>`
         }
-        list_in_html += `<div class="container m-2 p-2 bg-secondary text-white rounded">
+        list_in_html += `<div class="container-lg mb-5 p-2 bg-gray-dark text-blue rounded">
         Name: ${student.name}<br>
         Email: ${student.email}
         <ul class=" js-tag-input-selected-tags">${skills}</ul></div>`;
