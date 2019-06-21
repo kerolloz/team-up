@@ -1,6 +1,6 @@
 function get_all_students() {
     loading()
-    fetch("http://localhost:5000/users")
+    fetch("https://api-team-up-fci.herokuapp.com/users")
         .then(response => response.json())
         .then(students => show_students(students.docs))
         .catch(err => show_nothing());
@@ -37,7 +37,7 @@ function get_students_by_name() {
     loading()
     const name = document.getElementById("search-form").elements[0].value;
     console.log(name)
-    fetch(`http://localhost:5000/users?name=${name}`)
+    fetch(`https://api-team-up-fci.herokuapp.com/users?name=${name}`)
         .then(response => response.json())
         .then(students => show_students(students))
         .catch(err => show_nothing());
