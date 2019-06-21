@@ -12,7 +12,7 @@ function parse() {
             email: email,
             skills: user_skills
         };
-        fetch("http://localhost:5000/users", {
+        fetch("https://api-team-up-fci.herokuapp.com/users", {
                 method: 'POST',
                 // mode: 'cors', // no-cors, cors, *same-origin
                 // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
