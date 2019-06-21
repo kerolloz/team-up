@@ -29,7 +29,6 @@ function parse() {
                 if (response.status == 200){
                     // go to students page
                     window.location.href = "./students.html";
-                    throw new Error("Not OK");
                 }
                 else{
                     // show the error
