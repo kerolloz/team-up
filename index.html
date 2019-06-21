@@ -3,31 +3,13 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
 
-    <link crossorigin="anonymous" media="all"
-        integrity="sha512-dsqgdBtnWun6oxDg9q1xezEyITXQ8QsMdFm+JDoDk6Tzx9AEE1XcUEhWff/M2Jv85ucTVJCjp/2fGbh6Omtrgg=="
-        rel="stylesheet" href="github/frameworks-41c2037bf12f1e46d8f08b88a04a8d8f.css">
-
-    <link crossorigin="anonymous" media="all"
-        integrity="sha512-CaAamGh58o4ihow/RgXNccfqRmSLkrc77C0EsdJAorAiGabx8UfBHJA8qNM6dV6sP/mLZV2h3RCo2rD370oPRg=="
-        rel="stylesheet" href="github/github-bb09139146955473c2e2a9015b3d8cd6.css">
-
-    <meta name="viewport" content="width=device-width">
+    <link media="all" rel="stylesheet" href="github/frameworks-41c2037bf12f1e46d8f08b88a04a8d8f.css">
+    <link media="all" rel="stylesheet" href="github/github-bb09139146955473c2e2a9015b3d8cd6.css">
 
     <title>Let's Team Up</title>
-
-    <meta name="js-proxy-site-detection-payload"
-        content="NDFiN2M1ZWNiNDA5NmM1ZDU5ZGQ4NzRkMGNlNDkxNDk3ZmE2MTkyNzU2N2RmNzgxOGUwNzBjYzdkOGY2MjE4NXx7InJlbW90ZV9hZGRyZXNzIjoiNDEuMjM3LjIzNi4xMTkiLCJyZXF1ZXN0X2lkIjoiQUNGMDozNUY3MzoxNzFDQjBGOjIzNjZDOUQ6NUQwQzZEODkiLCJ0aW1lc3RhbXAiOjE1NjEwOTU1NjIsImhvc3QiOiJnaXRodWIuY29tIn0=">
-
-    <meta name="enabled-features"
-        content="UNIVERSE_BANNER,MARKETPLACE_FEATURED_BLOG_POSTS,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PULL_PANDA_HOMEPAGE,NOTIFY_ON_BLOCK,RELATED_ISSUES">
-
-    <meta name="html-safe-nonce" content="2814ce9ff82f8ae8488f3690e898706a31d9615e">
-
-    <meta http-equiv="x-pjax-version" content="8c43359e7d27f8dcd2e7d8e809ca291e">
-
-    <meta name="theme-color" content="#1e2327">
 </head>
 
 <body>
@@ -36,23 +18,24 @@
         <h3 class="text-white text-shadow-dark">Team Up</h3>
     </div>
 
-
     <div class="container-sm p-3 border" style="max-width: 460px">
-        <form method="POST" id="add-user" >
+        <form method="POST" id="add-user">
             <dl class="mt-2 form-group">
                 <dt><label for="name">Full Name</label></dt>
-                <dd><input type="text" class="form-control bg-white" name="name" id="name" required
-                        placeholder="Enter your name" autofocus></dd>
+                <dd><input type="text" class="form-control bg-white" name="name" id="name" placeholder="Enter your name"
+                        required autofocus></dd>
             </dl>
             <dl class="mt-2 form-group">
                 <dt><label for="email">Email Address</label></dt>
-                <dd> <input type="email" class="form-control bg-white" name="email" id="email" required
-                        placeholder="Enter your email"></dd>
+                <dd> <input type="email" class="form-control bg-white" name="email" id="email"
+                        placeholder="Enter your email" required></dd>
             </dl>
-            <div class="mt-2 form-group">
+
+
+            <div class="mt-2 form-group bg-white">
                 <label for="question-input-101" class="d-block mb-2">Skills</label>
-                <div class="tag-input-container js-tag-input-container">
-                    <div class="tag-input form-control js-tag-input-wrapper clearfix position-relative">
+                <div class="topic-input-container tag-input-container js-tag-input-container">
+                    <div class="tag-input form-control js-tag-input-wrapper clearfix position-relative bg-white">
                         <ul class="js-tag-input-selected-tags">
                             <li class="d-none topic-tag-action f6 float-left js-tag-input-tag js-template">
                                 <span class="js-placeholder-tag-name"></span>
@@ -67,11 +50,12 @@
                         <auto-complete src="" aria-owns="tag-popup" role="combobox" aria-haspopup="listbox"
                             aria-expanded="false">
                             <input type="text" id="question-input-101"
-                                class="tag-input-inner bg-white shorter d-inline-block p-0 border-0" autocomplete="off"
-                                aria-owns="tag-popup" spellcheck="false" aria-autocomplete="list"
-                                aria-controls="tag-popup" placeholder="">
+                                class="tag-input-inner form-control bg-white shorter d-inline-block p-0 my-1 border-0"
+                                autocomplete="off" autofocus="" aria-owns="tag-popup" spellcheck="false"
+                                aria-autocomplete="list" aria-controls="tag-popup" placeholder="Enter your skills"
+                                onfocus="remove_placeholder()">
                             <ul class="suggester border width-full bg-white left-0" id="tag-popup" style="top: 100%;"
-                                role="listbox" hidden=""></ul>
+                                hidden="" role="listbox"></ul>
                         </auto-complete>
 
                         <input type="hidden" name="answers[101][choice]" id="answers_101_choice" value="474"
@@ -79,35 +63,21 @@
                     </div>
                 </div>
 
-                <p class="note">What languages, frameworks, technologies, or skills do you have?</p>
-                <p class="note">e.g. python, ui, machine-learning, html, javascript</p>
+                <p class="mt-3 note">What languages, frameworks, technologies, or skills do you have?</p>
+                <p class="note">e.g. html, python, machine-learning</p>
             </div>
 
             <button class="btn btn-lg mt-4 btn-blue btn-block" type="submit" onclick="parse()">Add yourself</button>
         </form>
     </div>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script crossorigin="anonymous"
-        integrity="sha512-P3eW1tSt9yMTYl/1xec+Lu6c4gMoD1nzYkWtT8U4QbULnfRphxXsKzc6vlV2Kul5mRisdch6TWvANtRj7150OQ=="
-        type="application/javascript" src="github/frameworks-369fa3dc.js"></script>
-    <script crossorigin="anonymous" async="async"
-        integrity="sha512-uAM51IS5MuFr+cxYAvbOpJcBDG4eIA8w0aC44P6khK4sEY8LIzK2RDgsqyjUUKiISV6mMa9MryBwmaVD0bWMDA=="
-        type="application/javascript" src="github/github-bootstrap-ddb380c5.js">
+    <script type="application/javascript" src="github/frameworks-369fa3dc.js"></script>
+    <script async="async" type="application/javascript" src="github/github-bootstrap-ddb380c5.js">
     </script>
 
     <script src="submit.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script> -->
+    <script src="remove_placeholder.js"></script>
+
 </body>
 
 </html>
