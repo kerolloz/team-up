@@ -57,7 +57,7 @@ function show_students(students_list) {
         for (let skill of student.skills) {
             skills += `<li class="topic-tag-action f6 p-2 float-left js-tag-input-tag text-blue" style="height: 25px">${skill}</li>`
         }
-        list_in_html += `<div class="container-lg mb-5 p-2 bg-gray-dark text-blue rounded">
+        list_in_html += `<div class="ui fluid container mb-2 p-2 text-white rounded student" >
         Name: ${student.name}<br>
         Email: ${student.email}
         <ul class=" js-tag-input-selected-tags">${skills}</ul></div>`;
@@ -74,7 +74,13 @@ function set_search_results_html(html_content) {
 }
 
 function loading() {
-    set_search_results_html('<img src="./material-loader.gif">');
+    set_search_results_html(`<div id="students-list" class="col- mt-4">
+    <div class="ui blue swinging indeterminate progress">
+        <div class="bar">
+            <div class="progress">Searching</div>
+        </div>
+    </div>
+</div>`);
 }
 
 get_all_students(); // when the page load get all students 
