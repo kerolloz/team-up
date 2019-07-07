@@ -30,7 +30,7 @@ $('#skills-form').submit(function (e) {
             .then(students => show_students(students, section_id))
             .catch(err => show_nothing(section_id));
     } else {
-        alert("Please add skills first!");
+        alert("Please add the skills first!");
     }
 });
 
@@ -58,13 +58,12 @@ function show_nothing(section_id) {
     <div class="ui icon message red">
         <i class="user alternate slash icon"></i>
         <div class="content">
-        <div class="header">
-            Opss!
+            <div class="header">
+                Opss!
+            </div>
+            <p>Sorry, we found nothing.</p>
         </div>
-        <p>Sorry, we found nothing.</p>
-        </div>
-    </div>
-    `, section_id);
+    </div>`, section_id);
 }
 
 function set_search_results_html(html_content, section_id) {
@@ -72,13 +71,14 @@ function set_search_results_html(html_content, section_id) {
 }
 
 function loading(section_id) {
-    set_search_results_html(`<div class="ui icon message yellow">
-    <i class="notched circle loading icon"></i>
-    <div class="content">
-      <div class="header">
-        Just one second!
-      </div>
-      <p>We're fetching the results for you.</p>
-    </div>
-  </div>`, section_id);
+    set_search_results_html(`
+    <div class="ui icon message yellow">
+        <i class="notched circle loading icon"></i>
+        <div class="content">
+            <div class="header">
+                Just one second!
+            </div>
+            <p>We're fetching the results for you.</p>
+        </div>
+    </div>`, section_id);
 }
