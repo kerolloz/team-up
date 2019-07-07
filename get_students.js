@@ -1,29 +1,32 @@
 //  get students by name 
 $('#name-form').submit(function (e) {
     e.preventDefault();
+
     const section_id = 'students-by-name';
-    loading(section_id)
+    loading(section_id);
+
     const name = $("input[name=name]").val();
 
     fetch(`https://api-team-up-fci.herokuapp.com/users?name=${name}`)
         .then(response => response.json())
         .then(students => show_students(students, 'students-by-name'))
         .catch(err => show_nothing(section_id));
-})
+});
 
 // get students by skills
 $('#skills-form').submit(function (e) {
     e.preventDefault();
+
     const section_id = 'students-by-skills';
-    loading(section_id)
-    console.log("skills");
 
-    const skills = document.getElementsByTagName("li");
-    if (skills.length > 1) {
+    const skills = $("form#skills-form li").not('.js-template');
+    console.log(skills);
+    if (skills.length >= 1) {
+        loading(section_id);
         let user_skills = [];
-        for (i = 1; i < skills.length; i++)
-            user_skills.push(skills[i].innerHTML.split('\n')[1].trim());
-
+        for (const skill of skills)
+            user_skills.push(skill.innerHTML.split('\n')[1].trim());
+        console.log(user_skills)
         fetch(`https://api-team-up-fci.herokuapp.com/users?skills=${user_skills.join(',')}`)
             .then(response => response.json())
             .then(students => show_students(students, section_id))
@@ -31,15 +34,15 @@ $('#skills-form').submit(function (e) {
     } else {
         alert("Please add skills first!");
     }
-})
+});
 
 function show_students(students_list, section_id) {
     if (students_list.length === 0)
         return show_nothing();
 
-    list_in_html = "";
+    let list_in_html = "";
     for (let student of students_list) {
-        skills = ""
+        let skills = ""
         for (let skill of student.skills) {
             skills += `<li class="topic-tag-action f6 p-2 float-left js-tag-input-tag text-blue" style="height: 25px">${skill}</li>`
         }
@@ -60,7 +63,7 @@ function show_nothing(section_id) {
         <div class="header">
             Opss!
         </div>
-        <p>Nothing found!</p>
+        <p>Sorry, we found nothing.</p>
         </div>
     </div>
     `, section_id);
@@ -71,13 +74,13 @@ function set_search_results_html(html_content, section_id) {
 }
 
 function loading(section_id) {
-    set_search_results_html(`<div class="ui icon message">
+    set_search_results_html(`<div class="ui icon message yellow">
     <i class="notched circle loading icon"></i>
     <div class="content">
       <div class="header">
-        Just one second
+        Just one second!
       </div>
-      <p>We're fetching that content for you.</p>
+      <p>We're fetching the results for you.</p>
     </div>
   </div>`, section_id);
 }
