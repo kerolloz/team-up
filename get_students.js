@@ -23,7 +23,7 @@ $('#skills-form').submit(function (e) {
     if (skills.length >= 1) {
         loading(section_id);
 
-        let user_skills = skills.map((skill) => skill.innerHTML.split('\n')[1].trim());
+        let user_skills = skills.map((skill) => skill.innerText.split('\n')[0].trim());
 
         fetch(`https://api-team-up-fci.herokuapp.com/users?skills=${user_skills.join(',')}`)
             .then(response => response.json())
