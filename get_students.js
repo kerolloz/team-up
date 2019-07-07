@@ -3,14 +3,18 @@ $('#name-form').submit(function (e) {
     e.preventDefault();
 
     const section_id = 'students-by-name';
-    loading(section_id);
-
     const name = $("input[name=name]").val();
 
-    fetch(`https://api-team-up-fci.herokuapp.com/users?name=${name}`)
-        .then(response => response.json())
-        .then(students => show_students(students, section_id))
-        .catch(err => show_nothing(section_id));
+    if (name.length) {
+        loading(section_id);
+
+        fetch(`https://api-team-up-fci.herokuapp.com/users?name=${name}`)
+            .then(response => response.json())
+            .then(students => show_students(students, section_id))
+            .catch(err => show_nothing(section_id));
+    }else {
+        alert("Please enter the name first!");
+    }
 });
 
 // get students by skills
