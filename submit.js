@@ -1,13 +1,12 @@
 function parse() {
-    name = document.getElementById("add-user").elements[0].value;
-    email = document.getElementById("add-user").elements[1].value;
-    skills = document.getElementsByTagName("li");
-    user_skills = [];
-    if (skills.length > 1) {
-        for (i = 1; i < skills.length; i++)
-            user_skills.push(skills[i].innerHTML.split('\n')[1].trim());
+    const name = document.getElementById("add-user").elements[0].value;
+    const email = document.getElementById("add-user").elements[1].value;
+    const skills = $("form li").not('.js-template').toArray();
 
-        data = {
+    if (skills.length >= 1) {
+        let user_skills = skills.map((skill) => skill.innerText.split('\n')[0].trim());
+
+        const data = {
             name: name,
             email: email,
             skills: user_skills
@@ -20,15 +19,13 @@ function parse() {
                 body: JSON.stringify(data)
             })
             .then(response => {
-                if (response.status == 200){
+                if (response.status == 200) {
                     // go to students page
                     window.location.href = "./students.html";
-                }
-                else{
+                } else {
                     // show the error
                     return response.json();
                 }
-
             })
             .then(response => alert(response.message))
             .catch(err => console.log(err));
