@@ -9,7 +9,7 @@ $('#name-form').submit(function (e) {
 
     fetch(`https://api-team-up-fci.herokuapp.com/users?name=${name}`)
         .then(response => response.json())
-        .then(students => show_students(students, 'students-by-name'))
+        .then(students => show_students(students, section_id))
         .catch(err => show_nothing(section_id));
 });
 
@@ -18,15 +18,13 @@ $('#skills-form').submit(function (e) {
     e.preventDefault();
 
     const section_id = 'students-by-skills';
+    const skills = $("form#skills-form li").not('.js-template').toArray();
 
-    const skills = $("form#skills-form li").not('.js-template');
-    console.log(skills);
     if (skills.length >= 1) {
         loading(section_id);
-        let user_skills = [];
-        for (const skill of skills)
-            user_skills.push(skill.innerHTML.split('\n')[1].trim());
-        console.log(user_skills)
+
+        let user_skills = skills.map((skill) => skill.innerHTML.split('\n')[1].trim());
+
         fetch(`https://api-team-up-fci.herokuapp.com/users?skills=${user_skills.join(',')}`)
             .then(response => response.json())
             .then(students => show_students(students, section_id))
