@@ -1,3 +1,6 @@
+// const base_url = "http://localhost:5000";
+const base_url = "https://api-team-up-fci.herokuapp.com";
+
 //  get students by name 
 $('#name-form').submit(function (e) {
     e.preventDefault();
@@ -8,7 +11,7 @@ $('#name-form').submit(function (e) {
     if (name.length) {
         loading(section_id);
 
-        fetch(`https://api-team-up-fci.herokuapp.com/users?name=${name}`)
+        fetch(`${base_url}/users?name=${name}`)
             .then(response => response.json())
             .then(students => show_students(students, section_id))
             .catch(err => show_nothing(section_id));
@@ -29,7 +32,7 @@ $('#skills-form').submit(function (e) {
 
         let user_skills = skills.map((skill) => skill.innerText.split('\n')[0].trim());
 
-        fetch(`https://api-team-up-fci.herokuapp.com/users?skills=${user_skills.join(',')}`)
+        fetch(`${base_url}/users?skills=${user_skills.join(',')}`)
             .then(response => response.json())
             .then(students => show_students(students, section_id))
             .catch(err => show_nothing(section_id));

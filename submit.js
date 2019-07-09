@@ -1,3 +1,6 @@
+const basic_url = "http://localhost:5000";
+// const basic_url = "https://api-team-up-fci.herokuapp.com";
+
 function parse() {
     const name = document.getElementById("add-user").elements[0].value;
     const email = document.getElementById("add-user").elements[1].value;
@@ -11,7 +14,7 @@ function parse() {
             email: email,
             skills: user_skills
         };
-        fetch("https://api-team-up-fci.herokuapp.com/users", {
+        fetch(`${basic_url}/users`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
