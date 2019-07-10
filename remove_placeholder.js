@@ -7,3 +7,7 @@ function remove_placeholder(_placeholder = "Space separated") {
     else
         skills_input.placeholder = "";
 }
+
+(function(){
+    fetch("https://api-team-up-fci.herokuapp.com/ping");
+})();
