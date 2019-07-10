@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
@@ -13,17 +14,17 @@
     <link rel="stylesheet" href="./custom.css">
 
     <title>TEAM UP - Students</title>
+
 </head>
 
 <body>
 
-
+    <!-- Navbar -->
     <div class="ui secondary inverted primary menu">
-        <a class="left item" href="./index.html" style="margin-left: 5px">Register</a>
-        <div class="center item h3">TEAM UP</div>
-        <a class="active right item" href="./students.html" style="margin-right: 5px">Students</a>
+        <a class="left item h5" href="./registration.html" style="margin-left: 5px">Register</a>
+        <a class="center item h3" href="./index.html">TEAM UP</a>
+        <a class="right active item h5" href="./students.html" style="margin-right: 5px">Students</a>
     </div>
-
 
     <div class="container-sm p-3 mb-4">
 
@@ -51,9 +52,7 @@
                 </form>
 
                 <div class="row justify-content-center">
-
                     <div id="students-by-name" class="col- mt-4">
-                        <!-- Add some hint to search here -->
                         <div class="ui icon message">
                             <i class="exclamation circle icon"></i>
                             <div class="content">
@@ -110,9 +109,7 @@
                     </div>
                 </form>
                 <div class="row justify-content-center">
-
                     <div id="students-by-skills" class="col- mt-4">
-                        <!-- Add some hint to search here -->
                         <div class="ui icon message">
                             <i class="exclamation circle icon"></i>
                             <div class="content">
@@ -132,12 +129,9 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
     </div>
+
     <!-- semantic ui scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.6/dist/semantic.min.js"></script>
@@ -153,14 +147,15 @@
                     .transition('fade');
             });
     </script>
+
     <!-- Github scripts -->
     <script type="application/javascript" src="github/frameworks-369fa3dc.js"></script>
     <script async="async" type="application/javascript" src="github/github-bootstrap-ddb380c5.js">
     </script>
+
     <!-- custom scripts -->
     <script src="get_students.js"></script>
     <script src="remove_placeholder.js"></script>
-
 
 </body>
 

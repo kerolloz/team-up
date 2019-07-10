@@ -1,7 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
@@ -11,91 +12,132 @@
     <link media="all" rel="stylesheet" href="github/frameworks-41c2037bf12f1e46d8f08b88a04a8d8f.css">
     <link media="all" rel="stylesheet" href="github/github-bb09139146955473c2e2a9015b3d8cd6.css">
 
-    <link rel="stylesheet" href="./custom.css">
+    <title>TEAM UP - About</title>
 
-    <title>TEAM UP - Registration</title>
 </head>
 
 <body>
 
     <!-- Navbar -->
     <div class="ui secondary inverted primary menu">
-        <a class="active left item" href="./index.html" style="margin-left: 5px">Register</a>
-        <div class="center item h3">TEAM UP</div>
-        <a class="right item" href="./students.html" style="margin-right: 5px">Students</a>
+        <a class="left item h5" href="./registration.html" style="margin-left: 5px">Register</a>
+        <a class="center active item h3" href="./index.html">TEAM UP</a>
+        <a class="right item h5" href="./students.html" style="margin-right: 5px">Students</a>
     </div>
 
-    <div class="container-lg p-3 border" style="max-width: 460px; margin-top: 5%;">
-        <form class="ui form" method="POST" id="add-user">
-            <dl class="mt-2 form-group">
-                <dt><label for="name">Full Name</label></dt>
-                <dd><input type="text" class="form-control bg-white" name="name" id="name" placeholder="Enter your name"
-                        required autofocus></dd>
-            </dl>
-            <dl class="mt-2 form-group">
-                <dt><label for="email">Email Address</label></dt>
-                <dd> <input type="email" class="form-control bg-white" name="email" id="email"
-                        placeholder="Enter your email" required></dd>
-            </dl>
+    <style>
+        p {
+            font-size: 16px;
+        }
 
+        div.ui.segment {
+            margin: 20px 100px;
+        }
+    </style>
 
-            <div class="mt-2 form-group bg-white" onkeydown="remove_placeholder()">
-                <label for="question-input-101" class="d-block mb-2">Skills</label>
-                <div class="topic-input-container tag-input-container js-tag-input-container">
-                    <div class="tag-input form-control js-tag-input-wrapper clearfix position-relative bg-white">
-                        <ul class="js-tag-input-selected-tags">
-                            <li class="d-none topic-tag-action f6 float-left js-tag-input-tag js-template">
-                                <span class="js-placeholder-tag-name"></span>
-                                <button type="button" class="delete-topic-button f5 no-underline ml-2 js-remove"
-                                    tabindex="-1">
-                                    ×
-                                </button>
-                                <input type="hidden" name="answers[101][selections][]" class="js-topic-input" value="">
-                            </li>
-                        </ul>
-
-                        <auto-complete src="" aria-owns="tag-popup" role="combobox" aria-haspopup="listbox"
-                            aria-expanded="false">
-                            <input type="text" id="question-input-101"
-                                class="tag-input-inner form-control bg-white shorter d-inline-block p-0 my-1 border-0"
-                                autocomplete="off" autofocus="" aria-owns="tag-popup" spellcheck="false"
-                                aria-autocomplete="list" aria-controls="tag-popup" placeholder="Space separated"
-                                maxlength="40">
-                            <ul class="suggester border width-full bg-white left-0" id="tag-popup" style="top: 100%;"
-                                hidden="" role="listbox"></ul>
-                        </auto-complete>
-
-                        <input type="hidden" name="answers[101][choice]" id="answers_101_choice" value="474"
-                            class="form-control">
-                    </div>
-                </div>
-
-            </div>
-
-            <p class="mt-3 note">What languages, frameworks, technologies, or skills do you have?</p>
-            <p class="note">e.g. html, python, machine-learning</p>
-
-            <button class="btn btn-lg mt-4 btn-blue btn-block" type="submit" onclick="parse()">Add yourself</button>
-            <div class="ui success message">
-                <div class="header">Registered Successfully!</div>
-                <p>
-                    Now, please check your inbox and verify your email.<br>
-                    <b>Note:</b> You won't appear in the search results unless you verify your email.
-                </p>
-            </div>
-            <div class="ui error message">
-                <div class="header">Something Went Wrong!</div>
-                <p id="error-message"></p>
-            </div>
-        </form>
+    <div class="ui red segment">
+        <h3 class="ui header">What is the idea of TEAM UP?</h3>
+        <p>
+            The main idea is to help students to team up for their graduation project. You know, since our first year,
+            we
+            have always been struggling to team up for a project.
+        </p>
+        <p>
+            In short, students who haven't joined a team will register. Students who have an idea will search for other
+            students who haven't joined a team yet.
+        </p>
     </div>
+
+    <div class="ui orange segment">
+        <h3 class="ui header"> What does the phrasl verb <em>team up</em> mean? </h3>
+        <p>
+            It means to join another person, or form a group with other people, in order to do something together.
+        </p>
+        <a style="font-size: 12px" href="https://dictionary.cambridge.org/dictionary/english/team-up"
+            target="_blank">Cambridge
+            dictionary.</a>
+    </div>
+
+    <div class="ui yellow segment">
+        <h3 class="ui header">Why should I register in TEAM UP? </h3>
+        <p>
+            As <a href="#1">mentioned before</a> it would make our life easier.<br>
+            <blockquote><em><b>"Save the hassle for the project."</b></em></blockquote>
+
+        </p>
+        <p>
+            For example, Let's say that I have an idea for a project. I need a team. My idea will need someone who is
+            good at <em>python</em>. With TEAM UP, that's a pice of cake.
+            I will just <a href="./students.html">search for students</a>
+            who have python in their skill set. Send him/her an email.
+        </p>
+        <p>
+            On the other hand, If I don't have an idea for a project.
+            I would go <a href="registration.html">register</a> myself, fill up a 3-field small form, and booom.
+            Now, I am into the database, someone will find me suitable to join his project according to my skills.
+        </p>
+        <p>
+            Easy, isn't it?
+        </p>
+    </div>
+
+    <div class="ui olive segment">
+        <h3 class="ui header">Why email, why not facebook profile or phone number?</h3>
+        <p>
+            I see that email would be much easier means of communication.
+            It's up to you, you can ask for the student's facebook profile or phone number when you contact him/her via
+            email.
+        </p>
+    </div>
+
+    <div class="ui green segment">
+        <h3 class="ui header">Why should I trust TEAM UP?</h3>
+        <p>
+            It's an open-source project. In other words, you can see the code that powers this website.
+        </p>
+        <p>
+            It's available on GitHub <i class="github icon"></i>
+            <ul class="ui list">
+                <li>
+                    <a href="//github.com/kerolloz/team-up" target="_blank">
+                        Front-end
+                    </a>
+                </li>
+                <li>
+                    <a href="//github.com/kerolloz/team-up-backend" target="_blank">
+                        Back-end
+                    </a>
+                </li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="ui teal segment">
+        <h3 class="ui header">What should I do if I have a problem with registration or searching?</h3>
+        <p>
+            Please open an issue <a href="https://github.com/kerolloz/team-up/issues">here</a>
+        </p>
+    </div>
+
+    <div class="ui blue segment">
+        <h3 class="ui header">Why my name doesn't appear when I search for it?</h3>
+        <p>
+            Please, make sure that you have verified your email.
+        </p>
+        <p>
+            When you register, an email will be sent for you to verify that this is your email.
+            Just open the link for verification.
+        </p>
+        <p>
+            Still have the same problem? <br>
+            Please open an issue <a href="https://github.com/kerolloz/team-up/issues">here</a>
+        </p>
+    </div>
+
 
     <script type="application/javascript" src="github/frameworks-369fa3dc.js"></script>
     <script async="async" type="application/javascript" src="github/github-bootstrap-ddb380c5.js">
     </script>
-
-    <script src="submit.js"></script>
-    <script src="remove_placeholder.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.6/dist/semantic.min.js"></script>
