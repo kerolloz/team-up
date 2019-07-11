@@ -15,7 +15,7 @@
         "Brown",
         "Grey",
         "Black"
-    ]
+    ];
     segments.forEach(element => {
         element.classList.add(colors[id].toLowerCase());
         element.id = ++id;
