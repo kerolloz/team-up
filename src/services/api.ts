@@ -30,7 +30,7 @@ const api = {
 };
 
 export default {
-  BASE_URI: 'http://localhost:5000',
+  BASE_URI: 'https://api-team-up-fci.herokuapp.com',
   async signup(body: User) {
     return await api.post(`${this.BASE_URI}/users`, body);
   },
