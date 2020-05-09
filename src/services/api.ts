@@ -32,6 +32,9 @@ const api = {
 };
 
 export default {
+  async ping() {
+    return await api.get('/ping');
+  },
   async signup(body: User) {
     return await api.post('/users', body);
   },

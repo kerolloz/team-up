@@ -179,8 +179,13 @@
 <script>
 import Octicon from '@/components/Octicon';
 import InfoCard from '@/components/InfoCard';
+import apiService from '@/services/api';
+
 export default {
   name: 'Home',
   components: { InfoCard, Octicon },
+  mounted() {
+    apiService.ping();
+  },
 };
 </script>
