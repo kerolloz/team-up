@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import apiService from '../services/api';
+import apiService from '@/services/api';
 import Errors from '@/components/Errors';
 
 const PENDING = 1,

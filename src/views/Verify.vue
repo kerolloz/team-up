@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import apiService from '../services/api';
+import apiService from '@/services/api';
 import Errors from '@/components/Errors';
 
 export default {
