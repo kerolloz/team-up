@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 interface User {
   name: string;
   email: string;
@@ -14,7 +15,7 @@ const api = {
   headers: {
     'Content-Type': 'application/json',
   },
-  async post(endpoint: string, body: {}) {
+  async post(endpoint: string, body: unknown) {
     return await fetch(this.BASE_URI + endpoint, {
       method: 'post',
       headers: this.headers,
