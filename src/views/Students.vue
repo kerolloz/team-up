@@ -79,7 +79,11 @@
               />
             </div>
             <Errors :errors="errors" v-else-if="errors.length" />
-            <Errors :errors="['No one matches your search query']" v-else />
+            <Errors
+              title="We are sorry!"
+              errors="No one matches your search query"
+              v-else
+            />
           </div>
           <!-- note -->
           <div class="Toast width-fit width-full m-0" v-else>
