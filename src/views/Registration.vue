@@ -104,28 +104,13 @@
 import Errors from '@/components/Errors';
 import TagsInput from '@/components/TagsInput';
 import apiService from '@/services/api';
-import { ValidationProvider, extend, setInteractionMode } from 'vee-validate';
-import {
-  required,
-  email,
-  alpha_spaces as alphaSpaces,
-  min,
-} from 'vee-validate/dist/rules';
+import { ValidationProvider, extend } from 'vee-validate';
+import { required, email, alpha_spaces, min } from 'vee-validate/dist/rules';
 
-setInteractionMode('lazy');
 extend('email', email);
-extend('min', {
-  ...min,
-  message: '{_field_} must have at least 5 chars.',
-});
-extend('alpha_spaces', {
-  ...alphaSpaces,
-  message: '{_field_} should have lowercase, uppercase chars or spaces.',
-});
-extend('required', {
-  ...required,
-  message: '{_field_} is required.',
-});
+extend('min', min);
+extend('alpha_spaces', alpha_spaces);
+extend('required', required);
 
 export default {
   name: 'Registration',
