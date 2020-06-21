@@ -13,7 +13,7 @@
       </p>
     </InfoCard>
 
-    <InfoCard title="How it works?">
+    <InfoCard title="How does it work?">
       <div class="ml-4">
         <ol>
           <li class="mb-2">
@@ -33,7 +33,7 @@
 
           <li>
             <p class="h4">
-              If you have an idea and searching for team:
+              If you have an idea and searching for teammates:
             </p>
             <ol class="ml-3">
               <li>
@@ -61,14 +61,14 @@
       <p>
         For example, Let's say that I have an idea for a project. I need a team.
         My idea will need someone who is good at <em>python</em>. With TEAM UP,
-        that's a pice of cake. I will just
+        that's a piece of cake. I will just
         <router-link to="/students">search for students</router-link>
         who have python in their skill set. Send him/her an email.
       </p>
       <p>
         On the other hand, If I don't have an idea for a project. I would go
         <router-link to="/registration">register</router-link> myself, fill up a
-        3-field small form, and booom. Now, I am into the database, someone will
+        simple 3-field form, and boom. Now, I am into the database, someone will
         find me suitable to join his project according to my skills.
       </p>
       <p>
@@ -78,15 +78,15 @@
 
     <InfoCard title="Why there is no full list of all the students?">
       <p>
-        We see no need for this.<br />
+        We see that there is no need for this.<br />
         You should only see the search results according to skills or name.
       </p>
     </InfoCard>
 
     <InfoCard title="Why email? Why not Facebook profile or phone number?">
       <p>
-        We see that email would be much easier means of communication, more
-        formal as well. It's up to you, you can ask for the student's facebook
+        We see that email would be a much easier means of communication, more
+        formal as well. It's up to you, you can ask for the student's Facebook
         profile or phone number when you contact him/her via email.
       </p>
     </InfoCard>
@@ -169,12 +169,6 @@
     </InfoCard>
   </div>
 </template>
-
-<style scoped>
-.faq-cards {
-  font-size: 16px;
-}
-</style>
 
 <script>
 import Octicon from '@/components/Octicon';
