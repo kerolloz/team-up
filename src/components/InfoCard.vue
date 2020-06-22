@@ -1,9 +1,9 @@
 <template>
   <div
     :style="{ borderColor: currentColor }"
-    class="box-shadow-medium m-3 p-3 rounded-2 card-border"
+    class="box-shadow-medium m-3 p-3 rounded-2 card-border f4"
   >
-    <p class="mb-2 f2">{{ title }}</p>
+    <h2 class="mb-2">{{ title }}</h2>
     <slot> Empty Info Card </slot>
   </div>
 </template>
