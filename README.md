@@ -4,7 +4,7 @@
 
 _Team Up_ is a website that helps teams get together to work on projects.
 
-Deployed on **Heroku** <https://team-up-fci.herokuapp.com/>.
+Deployed on **Netlify** <https://team-up.netlify.app/>.
 
 ## Demo
 
