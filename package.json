@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@primer/octicons": "^10.0.0",
-    "@yaireo/tagify": "^3.17.7",
+    "@yaireo/tagify": "^4.9.8",
     "core-js": "^3.6.5",
     "vee-validate": "^3.3.9",
     "vue": "^2.6.11",
