@@ -8,7 +8,7 @@ Deployed on **Netlify** <https://team-up.netlify.app/>.
 
 ## Demo
 
-<p align="center"><img src="https://s6.gifyu.com/images/ezgif.com-video-to-gifec34986c81984ee9.gif" alt="demo gif" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/36763164/180858331-561b6b97-a5d8-468b-aab7-b80c1e169565.gif" alt="demo gif" /></p>
 
 ## I used
 
