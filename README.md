@@ -1,6 +1,6 @@
 # Team Up | Frontend
 
-> This project was mainly made to find a team for my graduation project.
+> This project was mainly made to find a team for [my graduation project](//github.com/empw-org/).
 
 _Team Up_ is a website that helps teams get together to work on projects.
 
