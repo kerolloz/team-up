@@ -36,9 +36,10 @@ export default {
     const input = this.$el;
     this.tagify = new Tagify(input, {
       pattern: /^[a-z][a-z0-9\-+.]{1,20}$/,
-      delimiters: ' ', // add new tags when space is pressed
       editTags: 1, // single click to edit a tag
       maxTags: 20,
+      delimiters: ' ',
+      trim: false,
       transformTag,
     });
     this.tagify.on('keydown', (e) => {
