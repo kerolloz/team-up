@@ -19,8 +19,8 @@ export default class NavigationItem extends Vue {
 
 <style scoped>
 .active {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.87);
+  color: #0070f3;
 }
 
 .link,
