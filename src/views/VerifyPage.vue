@@ -37,7 +37,8 @@ export default {
       .verify(this.token)
       .then(async (r) => {
         if (!r.ok) {
-          this.errors = apiService.parseErrors(await r.json());
+          const json = await r.json();
+          this.errors = json.message;
         }
       })
       .catch((e) => {

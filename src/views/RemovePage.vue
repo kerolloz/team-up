@@ -53,8 +53,8 @@ export default {
         .remove(this.token)
         .then(async (r) => {
           if (!r.ok) {
-            const response = await r.json();
-            this.errors = apiService.parseErrors(response);
+            const json = await r.json();
+            this.errors = json.message;
           }
         })
         .catch((e) => {
