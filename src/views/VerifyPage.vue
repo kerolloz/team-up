@@ -23,7 +23,7 @@ import apiService from '@/services/api';
 import Errors from '@/components/Errors';
 
 export default {
-  name: 'Verify',
+  name: 'VerifyPage',
   data() {
     return {
       token: this.$route.query.token,

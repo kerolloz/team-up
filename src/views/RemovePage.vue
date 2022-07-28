@@ -35,7 +35,7 @@ const PENDING = 1,
   RESPONSE = 3;
 
 export default {
-  name: 'Remove',
+  name: 'RemovePage',
   data() {
     return {
       PENDING,

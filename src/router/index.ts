@@ -1,45 +1,45 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/Home.vue';
-import NotFoundComponent from '@/views/NotFound.vue';
+import Home from '../views/HomePage.vue';
+import NotFoundComponent from '@/views/NotFoundPage.vue';
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
+    name: 'HomePage',
     component: Home,
   },
   {
     path: '/registration',
-    name: 'Registration',
+    name: 'RegistrationPage',
     // route level code-splitting
     // this generates a separate chunk (registration.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(
-        /* webpackChunkName: "registration" */ '../views/Registration.vue'
+        /* webpackChunkName: "registration" */ '../views/RegistrationPage.vue'
       ),
   },
   {
     path: '/remove',
     props: true,
-    name: 'Remove',
+    name: 'RemovePage',
     component: () =>
-      import(/* webpackChunkName: "remove" */ '../views/Remove.vue'),
+      import(/* webpackChunkName: "remove" */ '../views/RemovePage.vue'),
   },
   {
     path: '/students',
-    name: 'Students',
+    name: 'StudentsPage',
     component: () =>
-      import(/* webpackChunkName: "students" */ '../views/Students.vue'),
+      import(/* webpackChunkName: "students" */ '../views/StudentsPage.vue'),
   },
   {
     path: '/verify',
-    name: 'Verify',
+    name: 'VerifyPage',
     component: () =>
-      import(/* webpackChunkName: "verify" */ '../views/Verify.vue'),
+      import(/* webpackChunkName: "verify" */ '../views/VerifyPage.vue'),
   },
   { path: '*', component: NotFoundComponent },
 ];

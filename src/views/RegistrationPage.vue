@@ -86,7 +86,11 @@
             verify your email.
           </p>
         </div>
-        <Errors :errors="errors" v-if="errors.length" />
+        <Errors
+          title="Fix the errors below and try again!"
+          :errors="errors"
+          v-if="errors.length"
+        />
       </div>
     </div>
   </div>
@@ -113,7 +117,7 @@ extend('alpha_spaces', alpha_spaces);
 extend('required', required);
 
 export default {
-  name: 'Registration',
+  name: 'RegistrationPage',
   data() {
     return {
       name: '',
@@ -149,7 +153,7 @@ export default {
             this.success = true;
           } else {
             const json = await r.json();
-            this.errors = apiService.parseErrors(json);
+            this.errors = json.message;
           }
         })
         .catch((e) => this.showErrors(e))

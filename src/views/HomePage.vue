@@ -32,9 +32,7 @@
           </li>
 
           <li>
-            <p class="h4">
-              If you have an idea and searching for teammates:
-            </p>
+            <p class="h4">If you have an idea and searching for teammates:</p>
             <ol class="ml-3">
               <li>
                 <router-link to="/students">Search for a student</router-link>
@@ -71,9 +69,7 @@
         simple 3-field form, and boom. Now, I am into the database, someone will
         find me suitable to join his project according to my skills.
       </p>
-      <p>
-        Easy, isn't it?
-      </p>
+      <p>Easy, isn't it?</p>
     </InfoCard>
 
     <InfoCard title="Why there is no full list of all the students?">
@@ -112,9 +108,7 @@
     </InfoCard>
 
     <InfoCard title="Why my name doesn't appear when I search for it?">
-      <p>
-        Please, make sure that you have verified your email.
-      </p>
+      <p>Please, make sure that you have verified your email.</p>
       <p>
         When you register, an email will be sent for you to verify that this is
         your email. Just open the link for verification.
@@ -123,7 +117,7 @@
         Still have the same problem? <br />
         Please open an issue here
         <a href="//github.com/kerolloz/team-up/issues" target="_blank">
-          <Octicon name="octoface" class="octicon" />
+          <Octicon name="mark-github" class="octicon" />
         </a>
       </p>
     </InfoCard>
@@ -171,12 +165,12 @@
 </template>
 
 <script>
-import Octicon from '@/components/Octicon';
+import Octicon from '@/components/OcticonElement';
 import InfoCard from '@/components/InfoCard';
 import apiService from '@/services/api';
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: { InfoCard, Octicon },
   mounted() {
     apiService.ping();

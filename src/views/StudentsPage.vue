@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import Octicon from '@/components/Octicon';
+import Octicon from '@/components/OcticonElement';
 import Errors from '@/components/Errors';
 import StudentCard from '@/components/StudentCard';
 import TagsInput from '@/components/TagsInput';
@@ -122,6 +122,7 @@ const PENDING = 1,
   RESPONSE = 3;
 
 export default {
+  name: 'StudentsPage',
   data() {
     return {
       PENDING,
