@@ -11,7 +11,7 @@ interface ErrorResponse {
 }
 
 const api = {
-  BASE_URI: 'https://api-team-up-fci.herokuapp.com',
+  BASE_URI: 'https://api.team-up.tk',
   headers: {
     'Content-Type': 'application/json',
   },
