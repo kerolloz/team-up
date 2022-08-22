@@ -58,7 +58,6 @@ export default {
           }
         })
         .catch((e) => {
-          console.error(e);
           this.errors = [e.message];
         })
         .finally(() => {
