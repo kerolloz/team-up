@@ -43,12 +43,13 @@ export default {
       transformTag,
     });
     this.tagify.on('keydown', (e) => {
-      if (e.detail.originalEvent.key === 'Enter') {
+      if (e.detail.event.key === 'Enter') {
         this.$emit('search');
       }
     });
 
     this.tagify.on('add', () => this.$emit('search'));
+    this.tagify.on('remove', () => this.$emit('search'));
   },
 };
 </script>
