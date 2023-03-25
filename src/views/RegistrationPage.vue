@@ -153,7 +153,7 @@ export default {
             this.success = true;
           } else {
             const json = await r.json();
-            this.errors = json.message;
+            this.errors = json.errors.map((e) => e.message);
           }
         })
         .catch((e) => this.showErrors(e))
