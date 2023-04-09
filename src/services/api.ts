@@ -30,6 +30,11 @@ const api = {
       method: 'delete',
     });
   },
+  async put(endpoint: string) {
+    return await fetch(this.BASE_URI + endpoint, {
+      method: 'put',
+    });
+  },
 };
 
 export default {
@@ -40,7 +45,7 @@ export default {
     return await api.post('/users', body);
   },
   async verify(token: string) {
-    return await api.post(`/users/verify/${token}`, {});
+    return await api.put(`/users/verify/${token}`);
   },
   async remove(token: string) {
     return await api.delete(`/users/${token}`);
