@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 interface User {
   name: string;
   email: string;
@@ -11,7 +10,7 @@ interface ErrorResponse {
 }
 
 const api = {
-  BASE_URI: 'https://api.team-up.tk',
+  BASE_URI: 'https://team-up-mwoj.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },
