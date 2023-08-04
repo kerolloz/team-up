@@ -4,7 +4,7 @@
 
 _Team Up_ is a website that helps teams get together to work on projects.
 
-Deployed to <https://team-up.tk/>.
+Deployed to <https://team-up-crg.pages.dev>.
 
 ## Demo
 
