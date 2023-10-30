@@ -1,4 +1,4 @@
-# Team Up | Frontend <a target="_blank" href="https://kounter.tk"><img align="right" src="https://t.ly/y0yk" /></a>
+# Team Up | Frontend <a target="_blank" href="https://kounter.kerolloz.dev"><img align="right" src="https://t.ly/QPJxF" /></a>
 
 > This project was mainly made to find a team for [my graduation project](//github.com/empw-org/).
 
