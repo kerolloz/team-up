@@ -1,4 +1,4 @@
-# Team Up | Frontend <a target="_blank" href="https://kounter.kerolloz.dev"><img align="right" src="https://t.ly/QPJxF" /></a>
+# Team Up | Frontend <a target="_blank" href="https://kounter.kerolloz.dev"><img align="right" src="https://kounter.kerolloz.dev/badge/kerolloz.team-up?style=flat-square&color=333&label=Repo%20Visits&labelColor=456" /></a>
 
 > This project was mainly made to find a team for [my graduation project](//github.com/empw-org/).
 
